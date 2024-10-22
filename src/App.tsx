@@ -1,5 +1,7 @@
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div className="bg-blue-500 text-white p-4">Tailwind CSS is working!</div>
+  );
 }
 
 export default App;
