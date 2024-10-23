@@ -14,11 +14,7 @@ export const api = axios.create({
   },
 });
 
-interface UseAxiosProps {
-  baseURL?: string;
-}
-
-export default function useAxios(_props: UseAxiosProps) {
+export default function useAxios() {
   const onRequest = async (config: InternalAxiosRequestConfig) => {
     return config;
   };
