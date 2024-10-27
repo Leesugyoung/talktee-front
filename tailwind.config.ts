@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        "black-transparent": "rgba(0, 0, 0, 0.2)",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -16,6 +19,7 @@ const config: Config = {
       },
       width: {
         "500": "500px",
+        "400": "400px",
       },
       height: {
         "60": "60px",
