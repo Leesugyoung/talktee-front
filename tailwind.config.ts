@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        "main-color": "#2B70AF",
         "black-transparent": "rgba(0, 0, 0, 0.2)",
       },
       backgroundImage: {
