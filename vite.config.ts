@@ -2,12 +2,14 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { resolve } from "path";
+import svgrPlugin from "vite-plugin-svgr";
 import legacy from "@vitejs/plugin-legacy";
 
 export default defineConfig({
   plugins: [
     react(),
     tsconfigPaths(),
+    svgrPlugin(),
     legacy({
       targets: ["edge >= 93", "chrome >= 93"],
       modernPolyfills: true,

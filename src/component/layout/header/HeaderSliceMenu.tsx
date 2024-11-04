@@ -1,4 +1,7 @@
+import React from "react";
 import { UserBasicProfileIcon } from "../../share";
+import { MenuItem, menuList } from "./tools";
+import { v4 } from "uuid";
 
 const HeaderSliceMenu = ({ onClose }: { onClose: () => void }) => {
   return (
@@ -16,7 +19,7 @@ const HeaderSliceMenu = ({ onClose }: { onClose: () => void }) => {
             <div className="flex justify-end">
               <button onClick={onClose}>
                 <i
-                  className="fa-solid fa-x fa-2xl"
+                  className="fa-solid fa-x fa-xl"
                   style={{ color: "#969696" }}
                 ></i>
               </button>
@@ -28,16 +31,11 @@ const HeaderSliceMenu = ({ onClose }: { onClose: () => void }) => {
             </div>
             {/* 메뉴 리스트 */}
             <div className="grid grid-cols-1 divide-y mt-2">
-              <div className="flex items-center justify-start h-20 pl-5">
-                채팅 기록
-              </div>
-
-              <div className="flex items-center justify-start h-20 pl-5">
-                북마크
-              </div>
-              <div className="flex items-center justify-start h-20 pl-5">
-                마이페이지
-              </div>
+              {menuList?.map(i => (
+                <React.Fragment key={v4()}>
+                  <MenuItem title={i?.title} link={i.link} />
+                </React.Fragment>
+              ))}
             </div>
           </div>
           <div>

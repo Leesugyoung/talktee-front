@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        "footer-menu": "#d6d8e0",
         "main-color": "#2B70AF",
         "black-transparent": "rgba(0, 0, 0, 0.2)",
       },
